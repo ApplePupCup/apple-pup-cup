@@ -3,7 +3,7 @@ layout: layouts/home.njk
 title: Apple Pup Cup
 
 hero:
-  headline: "Your customers' dogs deserve better than whipped cream."
+  headline: "Your customers' dogs deserve more than whipped cream."
   subheadline: "Apple Pup Cup is a wholesome, apple-based treat made for coffee shops that care — and the dogs who walk through their doors every morning."
   primary_cta:
     label: "Become a Partner"
