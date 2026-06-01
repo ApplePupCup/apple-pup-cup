@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{{ description or site.description }}" />
+  <title>{% if title and title != site.name %}{{ title }} | {% endif %}{{ site.name }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__brand">Apple Pup Cup</a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav__links">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/products/" class="nav__link">Products</a></li>
+          <li><a href="/about/" class="nav__link">Our Mission</a></li>
+        </ul>
+      </nav>
+      <a href="/partner/" class="btn btn--primary btn--sm nav__cta">Become a Partner</a>
+    </div>
+  </header>
+
+  {{ content | safe }}
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <p class="footer__brand-name">Apple Pup Cup</p>
+          <p class="footer__tagline">{{ site.description }}</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <p class="footer__nav-label">Explore</p>
+          <ul class="footer__links">
+            <li><a href="/products/" class="footer__link">Products</a></li>
+            <li><a href="/about/" class="footer__link">Our Mission</a></li>
+            <li><a href="/partner/" class="footer__link">Become a Partner</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contact">
+          <p class="footer__nav-label">Get in Touch</p>
+          <a href="mailto:{{ site.email }}" class="footer__email">{{ site.email }}</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">{{ site.footerText }}</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

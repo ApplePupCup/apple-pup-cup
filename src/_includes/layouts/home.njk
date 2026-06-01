@@ -1,0 +1,114 @@
+---
+layout: layouts/base.njk
+---
+
+<main>
+
+  {# ── Hero ── #}
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <p class="hero__eyebrow">{{ site.description }}</p>
+        <h1 class="hero__headline">{{ hero.headline }}</h1>
+        <p class="hero__sub">{{ hero.subheadline }}</p>
+        <div class="hero__actions">
+          <a href="{{ hero.primary_cta.url }}" class="btn btn--primary btn--lg">{{ hero.primary_cta.label }}</a>
+          <a href="{{ hero.secondary_cta.url }}" class="btn btn--cream btn--lg">{{ hero.secondary_cta.label }}</a>
+        </div>
+      </div>
+      <div class="hero__graphic" aria-hidden="true">
+        <div class="hero__circle hero__circle--lg"></div>
+        <div class="hero__circle hero__circle--sm"></div>
+        <div class="hero__badge">
+          <span class="hero__badge-icon">🍎</span>
+          <span class="hero__badge-text">100% Wholesome</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ── Products ── #}
+  <section class="section section--white" id="products">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">{{ products_section.label }}</p>
+        <h2 class="section-heading">{{ products_section.heading }}</h2>
+        <p class="section-sub">{{ products_section.subheading }}</p>
+      </div>
+      <div class="products-grid">
+        {% for product in products_section.products %}
+        <div class="product-card">
+          <div class="product-card__badge">{{ product.subname }}</div>
+          <h3 class="product-card__name">{{ product.name }}</h3>
+          <p class="product-card__desc">{{ product.description }}</p>
+          <ul class="feature-list">
+            {% for feature in product.features %}
+            <li class="feature-list__item">{{ feature }}</li>
+            {% endfor %}
+          </ul>
+          <a href="/products/" class="btn btn--outline btn--sm product-card__cta">Learn More</a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {# ── Reasons ── #}
+  <section class="section section--cream" id="reasons">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">{{ reasons_section.label }}</p>
+        <h2 class="section-heading">{{ reasons_section.heading }}</h2>
+      </div>
+      <div class="reasons-grid">
+        {% for reason in reasons_section.reasons %}
+        <div class="reason-card">
+          <div class="reason-card__number">{{ reason.number }}</div>
+          <h3 class="reason-card__title">{{ reason.title }}</h3>
+          <p class="reason-card__body">{{ reason.body }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {# ── Ingredients ── #}
+  <section class="section section--white" id="ingredients">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">{{ ingredients_section.label }}</p>
+        <h2 class="section-heading">{{ ingredients_section.heading }}</h2>
+        <p class="section-sub">{{ ingredients_section.subheading }}</p>
+      </div>
+      <div class="ingredients-grid">
+        {% for ingredient in ingredients_section.ingredients %}
+        <div class="ingredient-card">
+          <div class="ingredient-card__emoji" aria-hidden="true">{{ ingredient.emoji }}</div>
+          <h4 class="ingredient-card__name">{{ ingredient.name }}</h4>
+          <p class="ingredient-card__desc">{{ ingredient.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {# ── Mission CTA ── #}
+  <section class="mission-cta section--dark">
+    <div class="container mission-cta__inner">
+      <div class="mission-cta__content">
+        <p class="mission-cta__label">501(c)(3) Nonprofit</p>
+        <h2 class="mission-cta__heading">Every treat supports a cause.</h2>
+        <p class="mission-cta__body">Apple Pup Cup is a product of Kyler Family Farm Rescue &amp; Therapy — a nonprofit dedicated to animal rescue in Washington State. Your partnership makes a difference.</p>
+      </div>
+      <div class="mission-cta__actions">
+        <a href="/about/" class="btn btn--cream btn--lg">Our Mission</a>
+        <a href="/partner/" class="btn btn--outline-light btn--lg">Become a Partner</a>
+      </div>
+    </div>
+  </section>
+
+  {% if content %}
+  <div class="container page-content">{{ content | safe }}</div>
+  {% endif %}
+
+</main>

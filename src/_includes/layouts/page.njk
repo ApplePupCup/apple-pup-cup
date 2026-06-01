@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+---
+
+<main>
+
+  <section class="page-hero section--cream">
+    <div class="container page-hero__inner">
+      {% if hero %}
+        {% if hero.label %}<p class="section-label">{{ hero.label }}</p>{% endif %}
+        <h1 class="page-hero__heading">{{ hero.headline or title }}</h1>
+        {% if hero.subheadline %}<p class="page-hero__sub">{{ hero.subheadline }}</p>{% endif %}
+      {% else %}
+        <h1 class="page-hero__heading">{{ title }}</h1>
+        {% if description %}<p class="page-hero__sub">{{ description }}</p>{% endif %}
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="container page-content">
+      {{ content | safe }}
+    </div>
+  </section>
+
+  {% if cta %}
+  <section class="section section--cream page-cta">
+    <div class="container page-cta__inner">
+      <h2 class="page-cta__heading">{{ cta.heading }}</h2>
+      {% if cta.body %}<p class="page-cta__body">{{ cta.body }}</p>{% endif %}
+      <a href="{{ cta.url }}" class="btn btn--primary btn--lg">{{ cta.label }}</a>
+    </div>
+  </section>
+  {% endif %}
+
+</main>
