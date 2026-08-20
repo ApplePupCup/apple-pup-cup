@@ -52,4 +52,4 @@ Customers love knowing their dog's treat does real good in the world.
 
 ## Washington State Proud
 
-We're based in Washington State — home to some of the finest apple-growing regions in the country. The dried apple flake powder in every Apple Pup Cup comes from real Washington apples, keeping it local, fresh, and meaningful.
+We're based in Washington State — home to some of the finest apple-growing regions in the country and the Washington State Cougars. The dried apple flake powder in every Apple Pup Cup comes from real Washington apples, keeping it local, fresh, and meaningful. Go Cougs!!!
