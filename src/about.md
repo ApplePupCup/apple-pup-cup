@@ -25,7 +25,7 @@ Our work spans animal rescue, therapy programs, and community education — all 
 
 ## How Apple Pup Cup Came to Be
 
-Apple Pup Cup was born from a simple idea: use what we know about wholesome, farm-sourced ingredients to create something special for the dogs who visit our community every day.
+Apple Pup Cup was born from one simple idea: use what we know about wholesome, farm-sourced ingredients to create something special for the dogs who visit our community every day.
 
 We watched coffee shops hand over squirts of whipped cream to dogs and thought — *they deserve something better*. Something made with real ingredients. Something that tells a story.
 
