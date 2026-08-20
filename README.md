@@ -51,4 +51,11 @@ src/
 
 ## Deployment
 
-Not yet configured. The site is fully static, so any static host will serve the contents of `_site/` after running `npm run build`.
+The site deploys to GitHub Pages automatically. Any push to `main` triggers the workflow in
+`.github/workflows/deploy.yml`, which builds the site and publishes it — there is nothing to run by hand.
+
+The live domain is set by `src/CNAME`, which is copied into the build output on every build. Changing the
+domain means editing that file **and** updating the custom domain under Settings > Pages.
+
+Because the site is served from the root of a custom domain, no `pathPrefix` is needed and links can be
+written as normal absolute paths (`/products/`).
