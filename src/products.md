@@ -18,7 +18,7 @@ cta:
 <div class="products-detail-grid">
   <div class="product-detail-card">
     <div class="product-detail-card__badge">Serve at Counter/Drive-Through</div>
-    <h3 class="product-detail-card__name">Backed Goods</h3>
+    <h3 class="product-detail-card__name">Baked Goods</h3>
     <p class="product-detail-card__desc">Ready-to-enjoy individual Apple Pup Cups, prepared and packaged by Kyler Family Farm. Just grab one, hand it over with a smile. No training, no prep, no cleanup.</p>
     <div class="product-detail-card__features">
       <ul>
