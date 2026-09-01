@@ -5,6 +5,7 @@ node_modules
 _site
 
 # Environment
+.claude
 .env
 .env.*
 
